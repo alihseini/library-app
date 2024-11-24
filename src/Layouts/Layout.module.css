@@ -1,0 +1,12 @@
+.header{
+    background-color: #303030;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+.footer{
+    background-color: #303030;
+    border-radius: 15px;
+    padding: 10px 15px;
+    text-align: center;
+}
