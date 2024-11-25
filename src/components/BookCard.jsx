@@ -1,8 +1,16 @@
+import { useState } from "react";
 import styles from "./BookCard.module.css";
 import { IoMdHeart } from "react-icons/io";
 
-function BookCard({ data: { image, title, author, language, pages } }) {
-  console.log(image);
+function BookCard({ data, likedListHandler }) {
+  const { image, title, author, language, pages } = data;
+  const [like, setLike] = useState(false);
+
+  const likeHandler = () => {
+    likedListHandler(data, like);
+    setLike((like) => !like);
+  };
+
   return (
     <div className={styles.bookCard}>
       <img src={image} alt="book-image" />
@@ -14,7 +22,9 @@ function BookCard({ data: { image, title, author, language, pages } }) {
           <span>{pages} pages</span>
         </div>
       </div>
-      <button><IoMdHeart /></button>
+      <button onClick={likeHandler}>
+        <IoMdHeart color={like ? "red" : "#e0e0e0"} />
+      </button>
     </div>
   );
 }

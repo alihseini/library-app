@@ -1,0 +1,13 @@
+.favoriteBook{
+    background-color: #a5a5a554;
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.favoriteBook img{
+    width: 40px;
+}
